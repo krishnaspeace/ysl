@@ -11,9 +11,6 @@ if [ ! 0 == 0 ]
 repo init --depth 1 -u https://github.com/crdroidandroid/android.git -b 14.0 --git-lfs
 # repo sync
 repo sync -c -j4 --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync
-# fixing fingerprint
-rm -rf vendor/fingerprint/opensource/interfaces
-git clone https://github.com/xiaomi-msm8953-devs/android_vendor_fingerprint_opensource_interfaces vendor/fingerprint/opensource/interfaces
 # Set up build environment
 export BUILD_USERNAME=kr
 export BUILD_HOSTNAME=crave
@@ -21,6 +18,6 @@ export CRDROID_MAINTAINER=krishnaspeace
 export BUILD_BROKEN_MISSING_REQUIRED_MODULES=true
 source build/envsetup.sh
 # Lunch configuration
-lunch lineage_ysl-userdebug
+lunch lineage_begonia-userdebug
 # Build confriguration
 m bacon
