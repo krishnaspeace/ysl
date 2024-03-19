@@ -1,7 +1,4 @@
-# Remove directory
-rm -rf .repo/local_manifests/ prebuilts/clang/host/linux-x86
-rm -rf build
-rm -rf prebuilts/rust
+
 # Clone local_manifests repository
 git clone https://github.com/krishnaspeace/local_manifests.git --depth 1 -b crdroid .repo/local_manifests
 if [ ! 0 == 0 ]
@@ -10,7 +7,7 @@ if [ ! 0 == 0 ]
 # Clone crdroid 14
 repo init --depth 1 -u https://github.com/crdroidandroid/android.git -b 14.0 --git-lfs
 # repo sync
-repo sync -c -j4 --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync
+/opt/crave/resync.sh
 # Set up build environment
 export BUILD_USERNAME=kr
 export BUILD_HOSTNAME=crave
