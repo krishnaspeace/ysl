@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8f57b7f (update sync command)
 # Clone local_manifests repository
 git clone https://github.com/krishnaspeace/local_manifests.git --depth 1 -b crdroid .repo/local_manifests
 if [ ! 0 == 0 ]
