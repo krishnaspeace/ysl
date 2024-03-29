@@ -14,5 +14,7 @@ BUILD_BROKEN_MISSING_REQUIRED_MODULES=true
 source build/envsetup.sh
 # Lunch configuration
 lunch evolution_begonia-userdebug
+# Clean
+make installclean
 # Build confriguration
 m evolution
