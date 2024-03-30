@@ -10,7 +10,7 @@ if [ ! 0 == 0 ]
 # Set up build environment
 export BUILD_USERNAME=kr
 export BUILD_HOSTNAME=crave
-BUILD_BROKEN_MISSING_REQUIRED_MODULES=true
+export BUILD_BROKEN_MISSING_REQUIRED_MODULES=true
 source build/envsetup.sh
 # Lunch configuration
 lunch evolution_begonia-userdebug
