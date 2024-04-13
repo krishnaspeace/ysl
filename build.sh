@@ -17,4 +17,5 @@ export CRDROID_MAINTAINER=krishnaspeace
 export BUILD_BROKEN_MISSING_REQUIRED_MODULES=true
 source build/envsetup.sh
 # Brunch configuration
+breakfast ysl
 brunch ysl
