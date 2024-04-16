@@ -1,5 +1,5 @@
-# Clone evo
-repo init -u https://github.com/Evolution-X/manifest -b uqpr2
+# Clone Evolution X
+repo init -u https://github.com/Evolution-X/manifest -b u
 # repo sync
 /opt/crave/resync.sh
 # Clone local_manifests repository
