@@ -14,7 +14,7 @@ export BUILD_HOSTNAME=crave
 export BUILD_BROKEN_MISSING_REQUIRED_MODULES=true
 source build/envsetup.sh
 # Lunch configuration
-lunch evolution_begonia-ap1a-userdebug
+lunch evolution_begonia-userdebug
 # Clean
 make installclean
 # Build confriguration
