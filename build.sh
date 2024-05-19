@@ -1,8 +1,8 @@
 rm -rf .repo/local_manifests/ 
-# Clone Evolution X
-repo init -u https://github.com/Evolution-X/manifest -b u
+# Clone Everest Os
+repo init -u https://github.com/ProjectEverest/manifest -b qpr2 --git-lfs
 # Clone local_manifests repository
-git clone https://github.com/krishnaspeace/local_manifests.git --depth 1 -b evo-bego .repo/local_manifests
+git clone https://github.com/krishnaspeace/local_manifests.git --depth 1 -b everest .repo/local_manifests
 if [ ! 0 == 0 ]
  then   curl -o .repo/local_manifests https://github.com/krishnaspeace/local_manifests.git
  fi
@@ -11,11 +11,10 @@ if [ ! 0 == 0 ]
 # Set up build environment
 export BUILD_USERNAME=kr
 export BUILD_HOSTNAME=crave
-export BUILD_BROKEN_MISSING_REQUIRED_MODULES=true
 source build/envsetup.sh
-# brunch configuration
-brunch begonia
+# lunch configuration
+lunch everest_begonia-userdebug
 # Clean
 make installclean
 # Build confriguration
-m evolution
+m everest
