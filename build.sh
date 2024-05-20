@@ -17,4 +17,4 @@ lunch everest_begonia-userdebug
 # Clean
 make installclean
 # Build confriguration
-m everest
+mka bacon
