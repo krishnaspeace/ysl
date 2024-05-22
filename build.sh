@@ -1,21 +1,13 @@
-# Clone crdroid 14
-repo init --depth 1 -u https://github.com/crdroidandroid/android.git -b 14.0 --git-lfs
-# Clone local_manifests repository
-git clone https://github.com/krishnaspeace/local_manifests.git --depth 1 -b main .repo/local_manifests
-if [ ! 0 == 0 ]
- then   curl -o .repo/local_manifests https://github.com/krishnaspeace/local_manifests.git
- fi
-# repo sync
-/opt/crave/resync.sh
-# Fixing fingerprint
-rm -rf vendor/fingerprint/opensource/interfaces
-git clone https://github.com/xiaomi-msm8953-devs/android_vendor_fingerprint_opensource_interfaces vendor/fingerprint/opensource/interfaces
+rm -rf .repo/local_manifests/  && # Clone local_manifests repository
+repo init -u https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp.git -b twrp-12.1 --depth=1 && 
+# Sync the repositories
+/opt/crave/resync.sh  &&
+# Clone twrp tree
+ git clone https://github.com/krishnaspeace/twrp_device_xiaomi_begonia.git --depth 1 -b twrp-12.1 /device/redmi/begonia  && 
 # Set up build environment
-export BUILD_USERNAME=kr
-export BUILD_HOSTNAME=crave
-export CRDROID_MAINTAINER=krishnaspeace
-export BUILD_BROKEN_MISSING_REQUIRED_MODULES=true
-source build/envsetup.sh
-# Brunch configuration
-breakfast ysl
-brunch ysl
+export BUILD_USERNAME=krishnaspeace 
+ export BUILD_HOSTNAME=crave 
+ source build/envsetup.sh && 
+ 
+# Build the ROM
+lunch twrp_begonia-eng && make installclean && make recoveryimage -j$(nproc --all)
