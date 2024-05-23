@@ -3,7 +3,7 @@ repo init -u https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aos
 # Sync the repositories
 /opt/crave/resync.sh  &&
 # Clone twrp tree
- git clone https://github.com/krishnaspeace/twrp_device_xiaomi_begonia.git --depth 1 -b twrp-12.1 /device/redmi/begonia  && 
+git clone https://github.com/krishnaspeace/local_manifests.git --depth 1 -b twrp .repo/local_manifests && 
 # Set up build environment
 export BUILD_USERNAME=krishnaspeace 
  export BUILD_HOSTNAME=crave 
