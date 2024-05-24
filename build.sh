@@ -1,4 +1,5 @@
-rm -rf .repo/local_manifests/ 
+rm -rf .repo/local_manifests/
+rm -rf  external/
 # Clone Everest Os
 repo init -u https://github.com/ProjectEverest/manifest -b qpr2 --git-lfs
 # Clone local_manifests repository
