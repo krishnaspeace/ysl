@@ -1,4 +1,5 @@
-rm -rf .repo/local_manifests/ 
+rm -rf .repo/local_manifests/
+rm -rf external 
 # Clone Bilss Os
 repo init -u https://github.com/BlissRoms/platform_manifest.git -b universe --git-lfs
 # Clone local_manifests repository
