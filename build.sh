@@ -14,4 +14,4 @@ export BUILD_HOSTNAME=crave
 export BLISS_BUILD_VARIANT=gapps
 source build/envsetup.sh
 # running configuration
-bliss -g begonia
+blissify -g begonia
