@@ -12,6 +12,7 @@ if [ ! 0 == 0 ]
 # Set up build environment
 export BUILD_USERNAME=kr
 export BUILD_HOSTNAME=crave
+export BUILD_BROKEN_MISSING_REQUIRED_MODULES=true
 export BLISS_BUILD_VARIANT=gapps
 source build/envsetup.sh
 # running configuration
