@@ -8,7 +8,11 @@ rm -rf external/chromium-webview/prebuilt/*
 rm -rf .repo/projects/external/chromium-webview/prebuilt/*.git
 rm -rf .repo/project-objects/LineageOS/android_external_chromium-webview_prebuilt_*.git
 # Sync
-/opt/crave/resync.sh
+if [ -f /opt/crave/resync.sh ]; then
+  /opt/crave/resync.sh
+else
+  repo sync -c --no-clone-bundle --optimized-fetch --prune --force-sync -j$(nproc --all)
+fi
 # Flags
 export BUILD_USERNAME=kr
 export BUILD_HOSTNAME=crave
