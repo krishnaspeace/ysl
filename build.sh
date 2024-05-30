@@ -1,5 +1,4 @@
 rm -rf .repo/local_manifests/
-rm -rf external 
 # Clone Bilss Os
 repo init -u https://github.com/BlissRoms/platform_manifest.git -b universe --git-lfs
 # Clone local_manifests repository
@@ -9,6 +8,8 @@ if [ ! 0 == 0 ]
  fi
 # repo sync
 /opt/crave/resync.sh
+# Fix git-lfs
+repo forall -c "git lfs install && git lfs pull && git lfs checkout"
 # Set up build environment
 export BUILD_USERNAME=kr
 export BUILD_HOSTNAME=crave
