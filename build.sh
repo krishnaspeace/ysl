@@ -9,6 +9,8 @@ if [ ! 0 == 0 ]
  fi
 # repo sync
 /opt/crave/resync.sh
+# Fix git-lfs 
+repo forall -c "git lfs install && git lfs pull && git lfs checkout"
 # Set up build environment
 export BUILD_USERNAME=kr
 export BUILD_HOSTNAME=crave
