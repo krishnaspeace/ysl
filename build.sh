@@ -6,14 +6,15 @@ git clone https://github.com/krishnaspeace/local_manifests.git --depth 1 -b blis
 if [ ! 0 == 0 ]
  then   curl -o .repo/local_manifests https://github.com/krishnaspeace/local_manifests.git
  fi
-# repo sync
-/opt/crave/resync.sh
-# Fix git-lfs
-repo forall -c "git lfs install && git lfs pull && git lfs checkout"
+# fix crave error
 repo init --git-lfs
 rm -rf external/chromium-webview/prebuilt/*
 rm -rf .repo/projects/external/chromium-webview/prebuilt/*.git
 rm -rf .repo/project-objects/LineageOS/android_external_chromium-webview_prebuilt_*.git
+# repo sync
+/opt/crave/resyn.sh
+# Fix git-lfs
+repo forall -c "git lfs install && git lfs pull && git lfs checkout" 
 # Set up build environment
 export BUILD_USERNAME=kr
 export BUILD_HOSTNAME=crave
