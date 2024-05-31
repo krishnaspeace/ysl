@@ -1,4 +1,8 @@
 rm -rf .repo/local_manifests/
+repo init --git-lfs
+rm -rf external/chromium-webview/prebuilt/*
+rm -rf .repo/projects/external/chromium-webview/prebuilt/*.git
+rm -rf .repo/project-objects/LineageOS/android_external_chromium-webview_prebuilt_*.git
 # Clone Bilss Os
 repo init -u https://github.com/BlissRoms/platform_manifest.git -b universe --git-lfs
 # Clone local_manifests repository
