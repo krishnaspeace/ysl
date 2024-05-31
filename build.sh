@@ -1,8 +1,4 @@
 rm -rf .repo/local_manifests/
-repo init --git-lfs
-rm -rf external/chromium-webview/prebuilt/*
-rm -rf .repo/projects/external/chromium-webview/prebuilt/*.git
-rm -rf .repo/project-objects/LineageOS/android_external_chromium-webview_prebuilt_*.git
 # Clone Bilss Os
 repo init -u https://github.com/BlissRoms/platform_manifest.git -b universe --git-lfs
 # Clone local_manifests repository
@@ -14,6 +10,10 @@ if [ ! 0 == 0 ]
 /opt/crave/resync.sh
 # Fix git-lfs
 repo forall -c "git lfs install && git lfs pull && git lfs checkout"
+repo init --git-lfs
+rm -rf external/chromium-webview/prebuilt/*
+rm -rf .repo/projects/external/chromium-webview/prebuilt/*.git
+rm -rf .repo/project-objects/LineageOS/android_external_chromium-webview_prebuilt_*.git
 # Set up build environment
 export BUILD_USERNAME=kr
 export BUILD_HOSTNAME=crave
