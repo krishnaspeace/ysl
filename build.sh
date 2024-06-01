@@ -11,7 +11,7 @@ rm -rf external/chromium-webview/prebuilt/*
 rm -rf .repo/projects/external/chromium-webview/prebuilt/*.git
 rm -rf .repo/project-objects/LineageOS/android_external_chromium-webview_prebuilt_*.git
 # repo sync
-/opt/crave/resyn.sh
+/opt/crave/resync.sh
 # Fix git-lfs
 repo forall -c "git lfs install && git lfs pull && git lfs checkout" 
 # Set up build environment
