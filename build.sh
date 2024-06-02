@@ -21,4 +21,5 @@ export BUILD_BROKEN_MISSING_REQUIRED_MODULES=true
 export BLISS_BUILD_VARIANT=gapps
 source build/envsetup.sh
 # running configuration
+mka clean
 blissify -c -g begonia
