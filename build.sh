@@ -16,5 +16,5 @@ export BLISS_BUILD_VARIANT=gapps
 source build/envsetup.sh
 # running configuration
 mka installclean
-blissify -c -g begonia
+blissify -g begonia
 /opt/crave/crave_sign.sh
