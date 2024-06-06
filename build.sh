@@ -7,6 +7,7 @@ if [ ! 0 == 0 ]
  then   curl -o .repo/local_manifests https://github.com/krishnaspeace/local_manifests.git
  fi
 # fix crave error
+rm -rf prebuilts/*
 rm -rf external/chromium-webview/prebuilt/*
 rm -rf .repo/projects/external/chromium-webview/prebuilt/*.git
 rm -rf .repo/project-objects/LineageOS/android_external_chromium-webview_prebuilt_*.git
