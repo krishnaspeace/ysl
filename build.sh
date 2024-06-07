@@ -1,6 +1,4 @@
 rm -rf .repo/local_manifests/
-# Clone Bilss Os
-repo init -u https://github.com/BlissRoms/platform_manifest.git -b universe --git-lfs
 # Clone local_manifests repository
 git clone https://github.com/krishnaspeace/local_manifests.git --depth 1 -b bliss .repo/local_manifests
 if [ ! 0 == 0 ]
@@ -14,10 +12,6 @@ rm -rf .repo/project-objects/LineageOS/android_external_chromium-webview_prebuil
 curl https://raw.githubusercontent.com/sounddrill31/docker-images/04449990912b9d7ee594193883740037f0ac80a7/aosp/common/resync.sh | bash
 # Fix git-lfs
 repo forall -c "git lfs install && git lfs pull && git lfs checkout"
-# Netron-clang
-cd prebuilts/clang/host/linux-x86/clang-neutron
-bash <(curl -s "https://raw.githubusercontent.com/Neutron-Toolchains/antman/main/antman") -S
-croot
 # Set up build environment
 export BUILD_USERNAME=kr
 export BUILD_HOSTNAME=crave
