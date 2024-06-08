@@ -13,6 +13,7 @@ curl https://raw.githubusercontent.com/sounddrill31/docker-images/04449990912b9d
 # Fix git-lfs
 repo forall -c "git lfs install && git lfs pull && git lfs checkout"
 # Set up build environment
+cd prebuilts/clang/host/linux-x86 && wget https://github.com/Neutron-Toolchains/clang-build-catalogue/releases/download/10032024/neutron-clang-10032024.tar.zst && mkdir clang-neutron && tar -I zstd -xf neutron-clang-10032024.tar.zst -C clang-neutron && cd /tmp/src/android
 export BUILD_USERNAME=kr
 export BUILD_HOSTNAME=crave
 export BUILD_BROKEN_MISSING_REQUIRED_MODULES=true
@@ -21,4 +22,3 @@ source build/envsetup.sh
 # running configuration
 mka clean
 blissify -c -g begonia
-/opt/crave/crave_sign.sh
