@@ -21,4 +21,3 @@ source build/envsetup.sh
 # running configuration
 mka clean
 blissify -c -g begonia
-/opt/crave/crave_sign.sh
