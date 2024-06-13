@@ -6,8 +6,9 @@ git clone https://github.com/krishnaspeace/local_manifests.git --depth 1 -b blis
 # Flags
 export BUILD_USERNAME=kr
 export BUILD_HOSTNAME=crave
-export BUILD_BROKEN_MISSING_REQUIRED_MODULES=true
 # Set up build environment
 source build/envsetup.sh
+# Install clean
+make installclean
 # running configuration
 blissify -g begonia
