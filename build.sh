@@ -1,12 +1,12 @@
 rm -rf .repo/local_manifests/
 # Init 
-repo init -u https://github.com/BlissRoms/platform_manifest.git -b universe --git-lfs
+# repo init -u https://github.com/BlissRoms/platform_manifest.git -b universe --git-lfs
 # Clone local_manifests repository
 git clone https://github.com/krishnaspeace/local_manifests.git --depth 1 -b bliss .repo/local_manifests
 # Fix crave
-rm -rf external/chromium-webview/prebuilt/*
-rm -rf .repo/projects/external/chromium-webview/prebuilt/*.git
-rm -rf .repo/project-objects/LineageOS/android_external_chromium-webview_prebuilt_*.git
+# rm -rf external/chromium-webview/prebuilt/*
+# rm -rf .repo/projects/external/chromium-webview/prebuilt/*.git
+# rm -rf .repo/project-objects/LineageOS/android_external_chromium-webview_prebuilt_*.git
 # Sync
 if [ -f /opt/crave/resync.sh ]; then
   /opt/crave/resync.sh
